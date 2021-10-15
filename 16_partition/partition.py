@@ -19,3 +19,13 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+
+    true_values = []
+    false_values = []
+
+    for value in lst:
+      if fn(value):
+        true_values.append(value)
+      else:
+        false_values.append(value)
+    return [true_values, false_values]

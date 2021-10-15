@@ -29,3 +29,6 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    total = sum((ord(letter) - 96) for letter in word.lower())
+    
+    return total % 2 == 1
