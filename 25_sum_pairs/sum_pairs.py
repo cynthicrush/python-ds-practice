@@ -21,3 +21,11 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    iterated_num = set()
+    for num in nums:
+      difference = goal - num
+      iterated_num.add(num)
+      if difference in iterated_num:
+        return (difference, num)
+
+    return ()
